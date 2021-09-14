@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javetours.view.ServiciosAdicionalesGUIController">
+   <children>
+      <TableView fx:id="datosTableView" layoutX="70.0" layoutY="227.0" onSort="#datosHandler" prefHeight="235.0" prefWidth="606.0">
+        <columns>
+          <TableColumn prefWidth="123.0" text="Código" />
+          <TableColumn prefWidth="279.0" text="Nombre" />
+            <TableColumn minWidth="0.0" prefWidth="145.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Label layoutX="68.0" layoutY="71.0" text="Código" />
+      <TextField fx:id="codigoTextField" layoutX="145.0" layoutY="66.0" />
+      <Label layoutX="68.0" layoutY="123.0" text="Nombre" />
+      <TextField fx:id="nombreTextField" layoutX="145.0" layoutY="118.0" />
+      <Label layoutX="68.0" layoutY="168.0" text="Precio" />
+      <TextField fx:id="precioTextField" layoutX="145.0" layoutY="163.0" />
+      <Button fx:id="volverButton" layoutX="692.0" layoutY="470.0" mnemonicParsing="false" onAction="#volverHandler">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="borrarButton" layoutX="692.0" layoutY="312.0" mnemonicParsing="false" onAction="#borrarHandler">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="nuevoButton" layoutX="692.0" layoutY="258.0" mnemonicParsing="false" onAction="#nuevoHandler">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/new.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
