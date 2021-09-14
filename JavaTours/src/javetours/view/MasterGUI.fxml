@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javetours.view.MasterGUIController">
+   <children>
+      <TabPane layoutX="23.0" layoutY="29.0" prefHeight="739.0" prefWidth="1001.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tours">
+            <content>
+              <AnchorPane fx:id="tourPane" minHeight="0.0" minWidth="0.0" prefHeight="768.0" prefWidth="1024.0">
+                     <children>
+                        <ImageView fx:id="tourImageView" fitHeight="661.0" fitWidth="992.0" layoutX="15.0" layoutY="15.0" onDragDetected="#tourImageHandler" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/landscape.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="tourLabel" layoutX="39.0" layoutY="28.0" opacity="0.69" prefHeight="52.0" prefWidth="947.0" style="-fx-background-color: white;" text="Nombre del Tour">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="PrimeroButton" layoutX="39.0" layoutY="601.0" mnemonicParsing="false" onAction="#PrimeroHandler" prefHeight="64.0" prefWidth="64.0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/first.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="previoButton" layoutX="129.0" layoutY="601.0" mnemonicParsing="false" onAction="#previoHandler" prefHeight="74.0" prefWidth="84.0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/previous.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="siguienteButton" layoutX="220.0" layoutY="601.0" mnemonicParsing="false" onAction="#siguienteHandler" prefHeight="74.0" prefWidth="83.0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/next.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="ultimoButton" layoutX="312.0" layoutY="601.0" mnemonicParsing="false" onAction="#ultimoHandler" prefHeight="74.0" prefWidth="88.0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/last.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="buscarButton" layoutX="412.0" layoutY="601.0" mnemonicParsing="false" onAction="#buscarHandler" prefHeight="72.0" prefWidth="65.0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="nuevoButton" layoutX="501.0" layoutY="601.0" mnemonicParsing="false" onAction="#nuevoHandler">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/new.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="modificarButton" layoutX="589.0" layoutY="601.0" mnemonicParsing="false" onAction="#modificarHandler">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/update.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="borrarButton" layoutX="677.0" layoutY="601.0" mnemonicParsing="false" onAction="#borrarHandler">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="reporteButton" layoutX="766.0" layoutY="601.0" mnemonicParsing="false" onAction="#reporteHandler">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/report.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Pane layoutX="578.0" layoutY="90.0" opacity="0.72" prefHeight="442.0" prefWidth="408.0" style="-fx-background-color: cyan;">
+                           <children>
+                              <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/departure.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="origenTextField" layoutX="110.0" layoutY="14.0" prefHeight="26.0" prefWidth="278.0" />
+                              <DatePicker fx:id="salidaDatePicker" layoutX="110.0" layoutY="45.0" prefHeight="26.0" prefWidth="191.0" />
+                              <TextField fx:id="destinoTextField" layoutX="109.0" layoutY="90.0" prefHeight="26.0" prefWidth="278.0" />
+                              <ImageView fitHeight="77.0" fitWidth="64.0" layoutX="23.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/arrival.png" />
+                                 </image>
+                              </ImageView>
+                              <DatePicker fx:id="llegadaDatePicker" layoutX="109.0" layoutY="122.0" prefHeight="26.0" prefWidth="192.0" />
+                              <ImageView fitHeight="93.0" fitWidth="64.0" layoutX="23.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/money.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="precioTextField" layoutX="107.0" layoutY="178.0" prefHeight="26.0" prefWidth="190.0" />
+                              <ImageView fitHeight="93.0" fitWidth="64.0" layoutX="23.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/tourist1.png" />
+                                 </image>
+                              </ImageView>
+                              <RadioButton fx:id="normalRadioButton" layoutX="107.0" layoutY="232.0" mnemonicParsing="false" onAction="#normalHandler" selected="true" style="-fx-background-color: white;" text="Normal" textFill="#09000d">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tipoTourGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="empresarialRadioButton" layoutX="191.0" layoutY="232.0" mnemonicParsing="false" onAction="#empresarialHandler" style="-fx-background-color: white;" text="Empresarial" textFill="#00050a" toggleGroup="$tipoTourGroup" />
+                              <RadioButton fx:id="ecologicoRadioButton" layoutX="305.0" layoutY="232.0" mnemonicParsing="false" onAction="#ecologicoHandler" style="-fx-background-color: white;" text="Ecológico" textFill="#010911" toggleGroup="$tipoTourGroup" />
+                              <ImageView fitHeight="93.0" fitWidth="64.0" layoutX="23.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="serviciosComboBox" layoutX="107.0" layoutY="369.0" onAction="#serviciosHandler" prefHeight="26.0" prefWidth="204.0" />
+                              <Button fx:id="serviciosAddButton" layoutX="341.0" layoutY="369.0" mnemonicParsing="false" onAction="#serviciosAddHandler">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/sa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="otroTextField1" layoutX="233.0" layoutY="265.0" prefHeight="26.0" prefWidth="158.0" />
+                              <TextField fx:id="otroTextField2" layoutX="233.0" layoutY="297.0" prefHeight="26.0" prefWidth="158.0" />
+                              <TextField fx:id="otroTextField3" layoutX="233.0" layoutY="332.0" prefHeight="26.0" prefWidth="158.0" />
+                              <Label fx:id="otroLabel3" layoutX="107.0" layoutY="337.0" opacity="0.8" text="otroLabel3" />
+                              <Label fx:id="otroLabel2" layoutX="107.0" layoutY="302.0" opacity="0.8" text="otroLabel2" />
+                              <Label fx:id="otroLabel1" layoutX="107.0" layoutY="270.0" opacity="0.81" text="otroLabel1" />
+                           </children></Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Clientes">
+            <content>
+              <AnchorPane fx:id="clientesPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="745.0" fitWidth="1324.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/fondo-blanco.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="316.0" fitWidth="554.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/clientes.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="listaClientes" layoutX="32.0" layoutY="341.0" prefHeight="355.0" prefWidth="552.0">
+                          <columns>
+                            <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                            <TableColumn fx:id="colCedula" prefWidth="75.0" text="Cedula" />
+                              <TableColumn fx:id="colTelefono" prefWidth="75.0" text="Telefono" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="379.0" layoutY="14.0" text="Agregar Nuevo Cliente">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="351.0" layoutY="70.0" text="Nombre del Cliente:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="351.0" layoutY="149.0" text="Cedula del Cliente:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="351.0" layoutY="243.0" text="Telefono de Contacto:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreCliente" layoutX="332.0" layoutY="91.0" prefHeight="25.0" prefWidth="231.0" />
+                        <TextField fx:id="cedulaCrearC" layoutX="332.0" layoutY="180.0" prefHeight="25.0" prefWidth="231.0" />
+                        <TextField fx:id="telefonoCrearC" layoutX="332.0" layoutY="264.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Button fx:id="crear" layoutX="210.0" layoutY="258.0" mnemonicParsing="false" onAction="#crearCliente" text="Crear">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="mostrarImagen" fitHeight="150.0" fitWidth="200.0" layoutX="669.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="mostrarNombre" alignment="TOP_CENTER" layoutX="659.0" layoutY="184.0" prefHeight="17.0" prefWidth="221.0" text="Nombre del Cliente">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="645.0" layoutY="308.0" text="Cedula del Cliente:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="645.0" layoutY="402.0" text="Telefono de Contacto:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cedulaInfoC" layoutX="662.0" layoutY="343.0" prefHeight="25.0" prefWidth="231.0" />
+                        <TextField fx:id="telefonoInfoC" layoutX="662.0" layoutY="444.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Button fx:id="eliminar" layoutX="869.0" layoutY="629.0" mnemonicParsing="false" onAction="#eliminarCliente" text="Eliminar">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="codificar" layoutX="744.0" layoutY="629.0" mnemonicParsing="false" onAction="#modificarCliente" text="Modificar">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <CheckBox fx:id="checkBoxModificar" layoutX="693.0" layoutY="589.0" mnemonicParsing="false" onAction="#checkBox" text="Modificar?" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Reservas">
+              <content>
+                <AnchorPane fx:id="reservasPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="714.0" fitWidth="1084.0" layoutX="-12.0" layoutY="7.0">
+                           <image>
+                              <Image url="@../../images/Gif4.gif" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="ListaTours" layoutX="25.0" layoutY="125.0" prefHeight="399.0" prefWidth="582.0">
+                           <columns>
+                              <TableColumn fx:id="ColCodigo" prefWidth="77.0" text="Codigo" />
+                              <TableColumn fx:id="ColNombre" prefWidth="59.0" text="Nombre" />
+                              <TableColumn fx:id="ColDestino" prefWidth="102.0" text="Destino" />
+                              <TableColumn fx:id="CodSalida" prefWidth="90.0" text="Fecha Salida" />
+                              <TableColumn fx:id="CodLlegada" prefWidth="106.0" text="Fecha Llegada" />
+                              <TableColumn fx:id="CodPrecio" prefWidth="147.0" text="Precio" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="NombreTour" editable="false" layoutX="700.0" layoutY="125.0" prefHeight="25.0" prefWidth="201.0" text="Nombre Tour..." />
+                        <ImageView fitHeight="68.0" fitWidth="581.0" layoutX="25.0" layoutY="57.0">
+                           <image>
+                              <Image url="@../../images/mejores-gifts-animados-de-viaje-1.gif" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="CantidadAcompañantes" layoutX="701.0" layoutY="214.0" prefHeight="25.0" prefWidth="168.0" promptText="Cantidad Acompañantes" />
+                        <TextField fx:id="Cedula" layoutX="701.0" layoutY="270.0" prefHeight="25.0" prefWidth="169.0" promptText="Cedula" />
+                        <TextField fx:id="Costo" layoutX="700.0" layoutY="378.0" prefHeight="25.0" prefWidth="166.0" />
+                        <Label layoutX="221.0" layoutY="81.0" prefHeight="34.0" prefWidth="435.0" text="Lista de Tours" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="24.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="ServiciosAdicionales" layoutX="700.0" layoutY="327.0" prefHeight="25.0" prefWidth="168.0" promptText="Servicios Adicionales.." />
+                        <TextField fx:id="CodigoReserva" layoutX="700.0" layoutY="432.0" prefHeight="25.0" prefWidth="163.0" />
+                        <Button fx:id="Reservar" layoutX="810.0" layoutY="488.0" mnemonicParsing="false" onAction="#ReservarHandler" prefHeight="25.0" prefWidth="69.0" text="Reservar" />
+                        <Button fx:id="reporte" layoutX="647.0" layoutY="488.0" mnemonicParsing="false" onAction="#verReporte" prefHeight="25.0" prefWidth="61.0" text="Reporte" />
+                        <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="656.0" layoutY="266.0">
+                           <image>
+                              <Image url="@../../images/ReservaFoto3.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="29.0" fitWidth="55.0" layoutX="645.0" layoutY="212.0">
+                           <image>
+                              <Image url="@../../images/ReservaFoto6.png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker fx:id="FechaReserva" layoutX="699.0" layoutY="168.0" prefHeight="25.0" prefWidth="167.0" />
+                        <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="658.0" layoutY="324.0">
+                           <image>
+                              <Image url="@../../images/ReservaFoto8.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="655.0" layoutY="371.0">
+                           <image>
+                              <Image url="@../../images/ReservaFoto9.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="60.0" layoutX="639.0" layoutY="430.0">
+                           <image>
+                              <Image url="@../../images/ReservaFoto7.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="647.0" layoutY="158.0">
+                           <image>
+                              <Image url="@../../../../JaveTours1/src/images/ReservaFoto11.jpg" />
+                           </image>
+                        </ImageView>
+                        <CheckBox fx:id="Pagar" layoutX="901.0" layoutY="437.0" mnemonicParsing="false" text="¿Pagar?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
